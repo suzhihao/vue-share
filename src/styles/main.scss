@@ -1,0 +1,38 @@
+@import "./bootstrap/bootstrap.scss";
+@import "./element/element.scss";
+
+/**
+ * icon fonts
+ */
+
+@import "./fonts/font-awesome.scss";
+@import "./fonts/simple-line-icons.scss";
+
+@import "./doc.scss";
+
+@import "./misc.scss";
+
+/**
+ * widgets
+ */
+@import "./widgets/margin.scss";
+@import "./widgets/padding.scss";
+@import "./widgets/spinner.scss"; // spinner
+@import "./widgets/rotate.scss"; // rotate
+@import "./widgets/color-variants"; // color variants
+@import "./widgets/border-width.scss";
+@import "./widgets/border.scss"; // border
+@import "./widgets/background.scss"; // background
+@import "./widgets/dashboard-stat/dashboardstat.scss";
+@import "./widgets/dashboard-stat/dashboardstat2.scss";
+@import "./widgets/note.scss";
+@import "./widgets/step.scss";
+@import "./widgets/toastr.scss";
+@import "./widgets/nprogress.scss";
+@import "./widgets/typeahead.scss";
+@import "./widgets/company";
+
+/**
+ * bootstrap-select
+ */
+@import "./bootstrap-select/bootstrap-select.scss";

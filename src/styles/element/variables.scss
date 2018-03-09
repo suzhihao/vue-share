@@ -1,0 +1,19 @@
+$--font-path: './element/src/fonts' !default;
+
+$--color-primary: $color-primary !default;
+$--color-success: $color-success !default;
+$--color-warning: $color-warning !default;
+$--color-info: $color-info !default;
+$--color-danger: $color-danger !default;
+
+$--tooltip-padding: 6px 8px;
+
+$--border-radius-base: 0px !default;
+$--border-radius-small: 0px !default;
+
+$--input-height: 34px !default;
+$--input-border: 1px solid #ccc !default;
+
+$--input-focus-border: #9bbff5;
+$--border-transition-base: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+$--input-placeholder-color: #999;

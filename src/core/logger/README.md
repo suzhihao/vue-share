@@ -1,0 +1,2 @@
+- 修改了 ./log4js-node/lib/configuration.js文件，原始文件改名成 configuration_raw.js
+- 增加了 ./log4js-node/lib/appenders/logstashUDP2.js文件

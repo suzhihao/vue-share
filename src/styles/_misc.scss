@@ -1,0 +1,155 @@
+.relative {
+  position: relative;
+}
+
+.fixed {
+  position: fixed;
+}
+
+.absolute {
+  position: absolute;
+}
+
+.btn, a {
+  outline: 0!important;
+  transition: all 0.15s linear,color 0.15s linear;
+  &:active, &:hover {
+    text-decoration: none;
+  }
+}
+
+em {
+  transition: all 0.3s;
+  font-style: normal;
+  color: darken(#FF934A, 15%);
+}
+
+td.change-before em {
+  color: #43464F;
+  background: rgba(255, 215, 215, 1);
+}
+
+td.change-after em {
+  color: #43464F !important;
+  background: rgba(220, 255, 191, 1) !important;
+}
+
+input::-webkit-input-placeholder {
+  transition: color .15s ease-in-out;
+}
+
+input::-moz-placeholder {
+  transition: color .15s ease-in-out;
+}
+
+input:-ms-input-placeholder {
+  transition: color .15s ease-in-out;
+}
+
+input:focus::-webkit-input-placeholder {
+  color: lighten(#999, 10%)!important;
+  opacity: 1;
+}
+
+input:focus::-moz-placeholder {
+  color: lighten(#999, 10%)!important;
+  opacity: 1;
+}
+
+input:focus:-ms-input-placeholder {
+  color: lighten(#999, 10%)!important;
+  opacity: 1;
+}
+
+input {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -o-appearance: none;
+  appearance: none;
+}
+
+/*
+  ie下输入框清除按钮
+*/
+input::-ms-clear {
+  display: none;
+}
+
+/*
+ Internet Explorer 10 doesn't differentiate device width from viewport width,
+ and thus doesn't properly apply the media queries in Bootstrap's CSS. To address this, following CSS code applied
+*/
+@-ms-viewport {
+  width: auto !important;
+}
+
+/* Custom scrollbars for webkit browsers */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+// ::-webkit-scrollbar-track {
+//   background-color: #eaeaea;
+//   border-left: 1px solid #cecece;
+// }
+//
+// ::-webkit-scrollbar-thumb {
+//   background-color: #cecece;
+// }
+//
+// ::-webkit-scrollbar-thumb:hover {
+//   background-color: #aaaaaa;
+// }
+
+// for gzw
+::-webkit-scrollbar-track {
+  background-color: #404b70;
+  border-left: 0px solid #cecece;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #576d98;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: lighten(#576d98, 5%);
+}
+
+::-webkit-scrollbar-track {
+  border-radius: 0;
+  box-shadow: none;
+  border: 0;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 0;
+  box-shadow: none;
+  border: 0;
+}
+
+.split-line {
+    border-top: 1px solid red;
+}
+
+.border-b4 {
+  border: 1px solid #eaedf4;
+}
+
+.border-b-b4 {
+    border-bottom: 1px solid #eaedf4;
+}
+
+.border-h-b4 {
+    border-left: 1px solid #eaedf4;
+    border-right: 1px solid #eaedf4;
+}
+
+.border-t-b4 {
+    border-top: 1px solid #eaedf4;
+}
+
+input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill{
+    background-color: #fff !important;
+    background-image: none !important;
+    color: rgb(0, 0, 0) !important;
+}

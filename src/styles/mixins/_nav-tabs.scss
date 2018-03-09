@@ -1,0 +1,149 @@
+/**
+ * Created by Wu Jian Ping on 2017/11/13.
+ */
+
+@mixin nav-tabs($color) {
+  > .nav-tabs {
+    border: none;
+    margin: 0;
+    > li {
+      margin-right: 2px;
+      border-top: 3px solid transparent;
+      &.active {
+        border-top: 3px solid $color;
+        margin-top: 0;
+        position: relative;
+        > a:hover {
+          border-radius: 0;
+          background: #fff;
+          border-color: #d4d4d4 #d4d4d4 transparent;
+        }
+      }
+      & > a {
+        margin-right: 0;
+        border-top: none !important;
+        border-bottom: none !important;
+        &:hover {
+          background: 0 0;
+          border-color: transparent;
+        }
+      }
+    }
+  }
+
+  .tab-content {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 10px;
+    border-radius: 0;
+  }
+
+  &.nav-justified > .tab-content {
+    margin-top: -1px;
+  }
+
+  &.tabs-below .nav-tabs {
+    > li {
+      border-top: none;
+      border-bottom: 3px solid transparent;
+      margin-bottom: 0;
+
+      &.active {
+        border-top: none;
+        border-bottom: 3px solid $color;
+        margin-bottom: 0;
+        position: relative;
+      }
+
+      > a {
+        margin-top: -1px;
+        border-top: none !important;
+      }
+    }
+  }
+
+  &.tabs-below.nav-justified {
+    .nav-tabs {
+      > li {
+        > a {
+          margin-top: 2px;
+        }
+      }
+    }
+    > .tab-content {
+      margin-bottom: -3px;
+    }
+  }
+}
+
+@mixin nav-tabs-inline($color) {
+  > .nav-tabs {
+    border: none;
+    margin: 0;
+    & > li {
+      margin: 0;
+      border-bottom: 4px solid transparent;
+      &:hover {
+        border-bottom: 4px solid lighten($color, 25%);
+      }
+      a {
+        background: 0 0 !important;
+        border: 0;
+        margin: 0;
+        padding-left: 15px;
+        padding-right: 15px;
+        color: #737373;
+      }
+      &.active {
+        background: 0 0 !important;
+        border-bottom: 4px solid $color;
+        position: relative;
+        > a {
+          border: 0;
+          color: #333;
+          &:hover {
+            background: 0 0 !important;
+            border: 0 !important;
+          }
+        }
+      }
+      &:hover > a {
+        border: 0 !important;
+        background: 0 0 !important;
+        color: #333;
+      }
+    }
+  }
+
+  &.nav-justified > .nav-tabs > li > a {
+    background: 0 0 !important;
+    border: 0 !important;
+  }
+
+  .tab-content {
+    margin-top: 0;
+    border: 0;
+    border-top: 1px solid #eef1f5;
+    padding: 30px 0;
+  }
+
+  &.tabs-below .tab-content {
+    border-top: none !important;
+    border-bottom: 1px solid #eef1f5;
+    margin-bottom: 0;
+  }
+
+  &.tabs-below .nav-tabs > li {
+    border-bottom: none;
+    margin-top: 0;
+    border-top: 4px solid transparent;
+    &:hover {
+      border-top: 4px solid lighten($color, 25%);
+    }
+
+    &.active {
+      border-top: 4px solid $color;
+      position: relative;
+    }
+  }
+}

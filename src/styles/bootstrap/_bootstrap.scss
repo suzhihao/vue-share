@@ -1,0 +1,12 @@
+/**
+ * Created by Wu Jian Ping on 2017/05/10.
+ */
+
+//import override variables
+@import "./theme/variables";
+
+//import bootstrap sass
+@import "~bootstrap-sass/assets/stylesheets/bootstrap";
+
+//import theme
+@import "./theme";

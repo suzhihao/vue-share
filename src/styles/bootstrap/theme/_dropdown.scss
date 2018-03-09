@@ -1,0 +1,99 @@
+.caret {
+  font-style: normal;
+  font-weight: normal;
+  border: 0;
+  margin: 0;
+  width: auto;
+  height: auto;
+  text-align: center;
+  margin-top: -1px;
+  vertical-align: baseline;
+  // Arrow icon
+  &:after {
+    content: "\f107";
+    font-family: FontAwesome;
+    display: block;
+    font-size: $icon-font-size;
+    width: $icon-font-size;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+
+.dropdown-menu {
+  @include box-shadow(none);
+}
+
+@media only screen and (max-width: 768px) {
+  .navbar-nav .dropdown > .dropdown-menu > li > a {
+    padding-left: 20px !important;
+  }
+}
+@media only screen and (min-width: 769px) {
+  .dropdown-menu {
+    @include box-shadow(5px 5px rgba(102,102,102,.1));
+  }
+
+  .btn-group,
+  .dropdown,
+  .dropdown-toggle {
+    > .dropdown-menu.top-left-caret {
+      border-top: 1px solid $dropdown-border;
+      margin-top: 10px;
+
+      &:after {
+        position: absolute;
+        top: -7px;
+        left: 10px;
+        right: auto;
+        display: inline-block!important;
+        border-right: 7px solid transparent;
+        border-bottom: 7px solid #fff;
+        border-left: 7px solid transparent;
+        content: '';
+      }
+
+      &:before {
+        position: absolute;
+        top: -8px;
+        left: 9px;
+        right: auto;
+        display: inline-block!important;
+        border-right: 8px solid transparent;
+        border-bottom: 8px solid $dropdown-border;
+        border-left: 8px solid transparent;
+        content: '';
+      }
+    }
+
+    > .dropdown-menu.top-right-caret {
+      border-top: 1px solid $dropdown-border;
+      margin-top: 10px;
+
+      &:after {
+        position: absolute;
+        top: -7px;
+        right: 10px;
+        left: auto;
+        display: inline-block!important;
+        border-right: 7px solid transparent;
+        border-bottom: 7px solid #fff;
+        border-left: 7px solid transparent;
+        content: '';
+      }
+
+      &:before {
+        position: absolute;
+        top: -8px;
+        right: 9px;
+        left: auto;
+        display: inline-block!important;
+        border-right: 8px solid transparent;
+        border-bottom: 8px solid $dropdown-border;
+        border-left: 8px solid transparent;
+        content: '';
+      }
+    }
+  }
+}

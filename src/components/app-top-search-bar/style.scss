@@ -1,0 +1,63 @@
+/**
+ * Created by Wu Jian Ping on - 2017/11/15.
+ */
+@import "../../styles/common.scss";
+
+.search-form {
+  height: $navbar-height;
+  background-color: lighten($navbar-inverse-bg, 5%);
+
+  .tt-input{
+    color:#fff;
+  }
+
+  .tt-hint{
+    color:#aaa;
+  }
+  .form-control {
+    border: 0;
+    height: $navbar-height !important;
+    background-color: transparent; //lighten($navbar-inverse-bg, 3%);
+
+    &:focus {
+      box-shadow: none;
+      background-color: transparent; //lighten($navbar-inverse-bg, 3%);
+    }
+  }
+
+  > .input-group-addon {
+    border: 0;
+    background-color: lighten($navbar-inverse-bg, 3%);
+    cursor: pointer;
+    color: $navbar-inverse-color;
+    transition: all 0.15s linear,color 0.15s linear;
+
+    > i {
+      font-size: 20px;
+      font-weight: 100;
+    }
+
+    &:hover {
+      background-color: lighten($navbar-inverse-bg, 5%);
+      color: #ccc;
+    }
+  }
+}
+
+@media only screen and (min-width: 993px) {
+  .search-form {
+    width: 460px;
+  }
+}
+
+@media only screen and (min-width: 1366px) {
+  .search-form {
+    width: 620px;
+  }
+}
+
+@media only screen and (min-width: 769px) and (max-width:992px){
+  .search-form {
+    width: 280px;
+  }
+}

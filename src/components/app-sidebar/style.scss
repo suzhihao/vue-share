@@ -1,0 +1,245 @@
+/**
+ * Created by Wu Jian Ping on - 2017/11/13.
+ */
+@import "../../styles/common.scss";
+
+.sidebar {
+  color: #fff;
+  background-color: $sidebar-bg-color;
+
+  i {
+    font-size: 16px;
+  }
+
+  > ul {
+    padding: 0;
+    list-style: none;
+    margin-bottom: 0;
+    // 一级菜单
+    > li {
+      > +li {
+        margin-top: 1px;
+      }
+
+      > a {
+        position: relative;
+        padding: 10px 12px;
+        min-height: 41px;
+        font-weight: 500;
+        color: #fff; // only for gzw, should be removed in standard version
+
+        &:hover {
+          background-color: $sidebar-active-color; //for gzw //$sidebar-link-hover-color;
+          // for gzw //$sidebar-link-active-bg;
+          color: #fff;
+        }
+
+        &.active {
+          background-color: $sidebar-active-color;
+          color: #fff; // for gzw //$sidebar-link-active-color;
+        }
+
+        &.has-child {
+          &:after {
+            content: "\f105";
+            font-family: FontAwesome;
+            font-size: 16px;
+            display: block;
+            position: absolute;
+            top: 50%;
+            margin-top: -8px;
+            right: 20px;
+            line-height: 1;
+            transform: rotate(0deg);
+            transition: transform 0.2s ease-in-out;
+          }
+
+          &.active {
+            background-color: $sidebar-active-color; //for gzw //$sidebar-link-active-color;
+            color: #fff;
+          }
+
+          &.open {
+            &:not(.active) {
+              background-color: $sidebar-open-bg;
+            }
+
+            &:after {
+              transform: rotate(90deg);
+            }
+
+            > .arrow {
+              display: block;
+              width: 8px;
+              height: 25px;
+              float: right;
+              position: absolute;
+              right: 0;
+              top: 10px;
+              // background-image: url("./images/sidebar-menu-arrow.png");
+            }
+          }
+        }
+
+        > i {
+          top: 0;
+          margin-right: 5px;
+          transition: opacity 0.2s ease-in-out;
+          vertical-align: middle;
+          line-height: 20px;
+        }
+
+        > .menu-title {
+          display: inline-block;
+          line-height: 20px;
+          vertical-align: middle;
+        }
+      }
+
+      > ul {
+        padding: 0;
+        list-style: none;
+        display: none;
+        // 二级菜单
+        > li {
+          > a {
+            padding: 12px $grid-gutter-width/2;
+            min-height: 41px;
+            font-weight: 500;
+            padding-left: 46px;
+
+            &:hover {
+              background-color: $sidebar-link-active-bg;
+              color: $sidebar-link-hover-color;
+            }
+
+            &.active {
+              background-color: $sidebar-link-active-bg;
+              color: $sidebar-link-active-color;
+            }
+
+            > i {
+              top: 0;
+              margin-right: 10px;
+              transition: opacity 0.2s ease-in-out;
+              vertical-align: middle;
+              line-height: 20px;
+            }
+
+            > span {
+              vertical-align: middle;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  a {
+    color: $sidebar-link-color;
+    display: block;
+    text-decoration: none;
+    transition: background 0.15s linear,color 0.15s linear;
+  }
+}
+@media only screen and (min-width: 769px) {
+  .sidebar-mini {
+    overflow: visible !important;
+
+    .sidebar {
+      > ul {
+        > li {
+          position: relative;
+
+          > a {
+            position: relative;
+            display: block;
+
+            > .menu-title {
+              cursor: default;
+              display: none;
+              position: absolute;
+              width: $sidebar-width;
+              left: $sidebar-xs-width;
+              top: 0;
+              height: 41px;
+              padding: 10px $grid-gutter-width/2;
+              background-color: $sidebar-active-color;
+            }
+
+            &.has-child {
+              &:after {
+                display: none !important;
+              }
+
+              > .arrow {
+                display: none;
+              }
+              // &:hover.open {
+              //   > .arrow {
+              //     display: none;
+              //   }
+              // }
+            }
+          }
+
+          > a:not(.has-child) {
+            > .menu-title {
+              cursor: pointer;
+            }
+          }
+
+          > ul {
+            display: none !important;
+            position: absolute;
+            width: $sidebar-width;
+            left: $sidebar-xs-width;
+            top: 41px;
+            // 二级菜单
+            > li {
+              > a {
+                padding-left: 15px;
+              }
+            }
+          }
+
+          &:hover {
+            > a {
+              > .menu-title {
+                display: block;
+              }
+            }
+
+            > ul {
+              display: block !important;
+              background-color: $sidebar-bg-color;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@media only screen and (max-width: 768px) {
+  .sidebar-collapsed {
+    .sidebar {
+      display: none;
+    }
+  }
+
+  .sidebar {
+    > ul {
+      > li {
+        > a {
+          &.has-child {
+            &.open {
+              > .arrow {
+                display: none;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>智慧国资企业信息查询系统 v1.0</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no">
+  <style>
+    body {
+      font-family: "Microsoft Yahei", "Open Sans", "Lantinghei SC", "Hiragino Sans GB", "STHeiti", "WenQuanYi Micro Hei", SimSun, sans-serif;
+      font-size: 14px;
+      color: #43464f;
+    }
+
+    h3 {
+      font-size: 24px;
+      font-weight: 300;
+      line-height: 1.1;
+      margin-top: 20px;
+      margin-bottom: 10px;
+    }
+
+
+    a:hover,
+    a:focus {
+      color: #2f76e2;
+    }
+
+    a {
+      font-size: 14px;
+      color: #5592ee;
+      text-decoration: none;
+      outline: 0 !important;
+      transition: all 0.15s linear, color 0.15s linear;
+    }
+
+    .page-500-full-page {
+      position: fixed;
+      left: 0;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      background-color: #fafafa !important;
+    }
+
+    .page-500 {
+      margin-top: 100px;
+      text-align: center;
+    }
+
+    .number {
+      position: relative;
+      top: 35px;
+      display: inline-block;
+      letter-spacing: -10px;
+      margin-top: 0;
+      margin-bottom: 10px;
+      line-height: 128px;
+      font-size: 128px;
+      font-weight: 300;
+      color: #ec8c8c;
+      text-align: right;
+    }
+
+    .details {
+      margin-left: 40px;
+      display: inline-block;
+      padding-top: 0;
+      text-align: left;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="page-500-full-page">
+    <div class="page-500">
+      <div class="number">
+        500
+      </div>
+      <div class="details">
+        <h3>Oops! 出错了!</h3>
+        <p>
+          {{message}} <br>
+          {{#if stack}}
+            {{stack}}<br>
+          {{/if}}
+          {{#if login}}
+            <a href="/search/advanced"> 返回首页 </a>
+          {{else}}
+            <a href="/"> 返回首页 </a>
+          {{/if}}
+        </p>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

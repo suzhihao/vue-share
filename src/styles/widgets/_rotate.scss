@@ -1,0 +1,22 @@
+/**
+ * Created by Wu Jian Ping on 2017/11/13.
+ */
+
+.rotate-45 {
+  transform: rotate(45deg);
+}
+.rotate-90 {
+  transform: rotate(90deg);
+}
+.rotate-180 {
+  transform: rotate(180deg);
+}
+.rotate-45-inverse {
+  transform: rotate(-45deg);
+}
+.rotate-90-inverse {
+  transform: rotate(-90deg);
+}
+.rotate-180-inverse {
+  transform: rotate(-180deg);
+}

@@ -1,0 +1,26 @@
+/**
+ * Created by Wu Jian Ping on 2017/11/13.
+ */
+@mixin dashboard-stat($color, $investedColor) {
+  background-color: $color;
+
+  .more {
+    color: $investedColor;
+    background-color: darken($color, 4%);
+  }
+
+  .details {
+    .number {
+      color: $investedColor;
+    }
+    .desc {
+      color: $investedColor;
+      @include opacity(0.8);
+    }
+  }
+
+  .visual > i {
+    color: $investedColor;
+    @include opacity(0.3);
+  }
+}

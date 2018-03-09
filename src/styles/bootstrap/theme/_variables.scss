@@ -1,0 +1,88 @@
+/**
+ * Created by Wu Jian Ping on 2017/05/10.
+ */
+
+@import "../../variables";
+//setup icon path
+$icon-font-path: "~bootstrap-sass/assets/fonts/bootstrap/";
+//-----------------Colors-----------------
+$brand-primary: $color-primary !default;
+$brand-success: $color-success !default;
+$brand-info: $color-info !default;
+$brand-warning: $color-warning !default;
+$brand-danger: $color-danger !default;
+
+//-----------------Scaffolding-----------------
+$body-bg: #ffffff;
+$link-color: $color-primary;
+$link-hover-color: #2f76e2; //darken(#FF934A, 15%);
+$text-color: #43464F;
+
+//-----------------Typography-----------------
+// $font-family-base: "San Francisco", "Microsoft Yahei", sans-serif !default;
+$font-family-base: "Microsoft Yahei", "Open Sans", "Lantinghei SC", "Hiragino Sans GB", "STHeiti", "WenQuanYi Micro Hei", SimSun, sans-serif;
+$headings-font-weight: 300 !default;
+$font-size-base: 14px;
+
+//-----------------Components-----------------
+$border-radius-base: 0 !default;
+$border-radius-large: 0 !default;
+$border-radius-small: 0 !default;
+
+$padding-base-vertical:     6px !default;
+$padding-base-horizontal:   12px !default;
+
+$padding-large-vertical:    10px !default;
+$padding-large-horizontal:  16px !default;
+
+$padding-small-vertical:    5px !default;
+$padding-small-horizontal:  10px !default;
+
+$padding-xs-vertical:       1px !default;
+$padding-xs-horizontal:     5px !default;
+
+//-----------------Buttons-----------------
+$btn-primary-border:             $brand-primary !default;
+$btn-success-border:             $brand-success !default;
+$btn-info-border:                $brand-info !default;
+$btn-warning-border:             $brand-warning !default;
+$btn-danger-border:              $brand-danger !default;
+
+//-----------------Forms-----------------
+//** Border color for inputs on focus
+$input-border-focus: lighten($link-color, 15%) !default;
+$input-color-placeholder: #999 !default;
+
+//-----------------Dropdown--------------
+$dropdown-border: $color-border;
+// $dropdown-link-active-color: darken($color-a1, 15%);
+// $dropdown-link-active-bg: #f5f5f5;
+
+//-----------------Grid system-----------------
+$grid-columns : 24;
+$grid-gutter-width: 30px;
+
+//-----------------Navbar-----------------
+$navbar-height: 46px;
+$navbar-margin-bottom: 0px;
+$navbar-inverse-bg: $navbar-bg;
+$navbar-inverse-link-color: #fff;
+$navbar-inverse-link-hover-bg: rgba(0,0,0,.1);
+$navbar-inverse-link-active-bg: rgba(0,0,0,.1);
+
+//-----------------Form states and alerts-----------------
+$state-success-text: #27a4b0;
+$state-success-bg: #abe7ed;
+$state-success-border: #abe7ed;
+
+$state-info-text: #327ad5;
+$state-info-bg: #e0ebf9;
+$state-info-border: #e0ebf9;
+
+$state-warning-text: #c29d0b;
+$state-warning-bg: #f9e491;
+$state-warning-border: #f9e491;
+
+$state-danger-text: #e73d4a;
+$state-danger-bg: #fbe1e3;
+$state-danger-border: #fbe1e3;

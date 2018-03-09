@@ -1,0 +1,90 @@
+$suggestion-hover-bg-color: darken(#fcfcfc, 5%);
+$suggestion-highlight-color: #0FBBE9;
+$tt-menu-border-color: #efefef;
+$tt-suggestion-active-color: #FF934A;
+$tt-hint-color: rgb(153,153,153); // the color like placeholder
+
+.twitter-typeahead {
+  width: 100%;
+  display: table !important;
+  transition: all 0.03s;
+
+  > .form-control {
+    margin: 0 !important;
+  }
+
+  .tt-hint {
+    color: $tt-hint-color;
+  }
+
+  .tt-menu {
+    min-width: 160px;
+    margin-top: 0;
+    padding: 5px 0;
+    background-color: #fff;
+    border: 1px solid $tt-menu-border-color;
+    background-clip: padding-box;
+    width: 100%;
+    overflow-y: auto;
+    max-height: 250px;
+    @include box-shadow(5px 5px rgba(102,102,102,.1));
+  }
+
+  .modal-open .tt-menu {
+    z-index: 10055 !important;
+  }
+
+  .tt-suggestion {
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 16px;
+
+    > a {
+      display: inline-block;
+      width: 100%;
+      color: #7A808F;
+
+      > .match-field {
+        display: inline-block;
+        min-width: 120px;
+        color: #A6ACBC;
+      }
+
+      > .match-value {
+        display: inline-block;
+      }
+    }
+  }
+
+  .tt-suggestion:hover {
+    cursor: pointer;
+    background: $suggestion-hover-bg-color;
+  }
+
+  .tt-highlight {
+    color: $suggestion-highlight-color;
+    font-weight: normal;
+  }
+
+  .tt-cursor {
+    background: $suggestion-hover-bg-color;
+
+    > a {
+      > .match-field {
+        color: $tt-suggestion-active-color;
+      }
+
+      > .match-value {
+        color: $tt-suggestion-active-color;
+
+        > strong {
+          font-weight: normal;
+        }
+
+        > .tt-highlight {
+          color: $tt-suggestion-active-color;
+        }
+      }
+    }
+  }
+}
